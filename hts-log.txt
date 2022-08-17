@@ -1,0 +1,12 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 06 Aug 2022 18:41:46 at https://kckonam.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://kckonam.com/ -O1 "D:\kckonam\kckonam" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:42:08	Error: 	"Not Found" (404) at link https://kckonam.com/plugins/themefisher-font/fonts/themefisher-font.svg?ug5hnh (from https://kckonam.com/plugins/themefisher-font/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 22 seconds : 45 links scanned, 43 files written (8784039 bytes overall) [7899127 bytes received at 359051 bytes/sec], 8183790 bytes transferred using HTTP compression in 37 files, ratio 88%, 5.0 requests per connection
+(1 errors, 0 warnings, 0 messages)
