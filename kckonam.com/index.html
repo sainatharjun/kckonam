@@ -2,84 +2,111 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html> <!--<![endif]-->
 
 <!-- Mirrored from kckonam.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 13:11:47 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
 <head>
-  
-	<style>
-   
-		   @media(max-width: 650px) {
-         .mobileImage{
-           display: block!important;
-         }
-         .br{
-      display: block;
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,600&family=Open+Sans&family=Raleway&display=swap&font"
+    rel="stylesheet">
+
+  <style>
+    .readmore .moreText {
+      display: none;
     }
-  .call-to-action .container {
-    background-color: black!important;
-    background-image: none!important;
-    margin-right: auto!important;
-    /* margin-top: 100px!important; */
-    width: 100%!important;
-  }
-  .btns a{
-    margin: 0!important;
-  }
 
-  .orderNow{
-  padding: 7px 20px ;
-}
-section .container{
-  padding-top: 35px!important;
-  padding-bottom: 35px!important;
-}
-.navigation{
-  background-color: rgba(0, 0, 0, 0.95)!important;
-}
-#topimg{
-  margin-top: 132px;
-}
-}
-		.sticky-header{
-			background-color: rgba(0, 0, 0, 0.95)!important;
-		}
-		.sticky-header a{
-			color: white!important;
+    @media(max-width: 650px) {
+      .mobileImage {
+        display: block !important;
+      }
 
-		}
-		.navigation a:hover{
-			color: rgb(255, 123, 0)!important;
-		}
+      .br {
+        display: block;
+      }
 
-		.nextArrow, .prevArrow{
-			background-color: orange!important;
-		}
-		.nextArrow:hover, .prevArrow:hover{
-			background-color: rgb(255, 136, 0)!important;
+      .call-to-action .container {
+        background-color: black !important;
+        background-image: none !important;
+        margin-right: auto !important;
+        /* margin-top: 100px!important; */
+        width: 100% !important;
+      }
+
+      .btns a {
+        margin: 0 !important;
+      }
+
+      .orderNow {
+        padding: 7px 20px;
+      }
+
+      section .container {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+
+      .navigation {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+      }
+
+      #topimg {
+        margin-top: 100px;
+      }
+    }
+
+    .sticky-header {
+      background-color: rgba(0, 0, 0, 0.95) !important;
+    }
+
+    .sticky-header a {
+      color: white !important;
 
     }
-  .mobileImage{
-    display: none;
-  }
-		
-		ol li{
-		    margin-bottom:15px;
-		    font-size:110%;
-		}
-    .modal-open, .show{
-      padding:0!important;
+
+    .navigation a:hover {
+      color: rgb(255, 123, 0) !important;
     }
-    @media (min-width: 576px){
+
+    .nextArrow,
+    .prevArrow {
+      background-color: orange !important;
+    }
+
+    .nextArrow:hover,
+    .prevArrow:hover {
+      background-color: rgb(255, 136, 0) !important;
+
+    }
+
+    .mobileImage {
+      display: none;
+    }
+
+    ol li {
+      margin-bottom: 15px;
+      font-size: 110%;
+    }
+
+    .modal-open,
+    .show {
+      padding: 0 !important;
+    }
+
+    @media (min-width: 576px) {
       .modal-dialog {
-    max-width: 800px!important;
-    margin: 1.75rem auto;
-}}
+        max-width: 800px !important;
+        margin: 1.75rem auto;
+      }
+    }
 
 
-/* @media (max-width: 576px){
+    /* @media (max-width: 576px){
 .hero-area{
 height: 32vh!important;
 }
@@ -97,47 +124,65 @@ section .container{
   
 }
 } */
+  </style>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-	</style>
-	 <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAzPb7tmEhFhnHM6gZeY3e2GDxbfQK40CQ",
+      authDomain: "kckonam.firebaseapp.com",
+      projectId: "kckonam",
+      storageBucket: "kckonam.appspot.com",
+      messagingSenderId: "404637331106",
+      appId: "1:404637331106:web:3dde4a1c16f5e44aea71fb",
+      measurementId: "G-95SJBWQ7GS"
+    };
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAzPb7tmEhFhnHM6gZeY3e2GDxbfQK40CQ",
-    authDomain: "kckonam.firebaseapp.com",
-    projectId: "kckonam",
-    storageBucket: "kckonam.appspot.com",
-    messagingSenderId: "404637331106",
-    appId: "1:404637331106:web:3dde4a1c16f5e44aea71fb",
-    measurementId: "G-95SJBWQ7GS"
-  };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '192715953598679');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=192715953598679&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- <meta name="description" content="Bingo One page parallax responsive HTML Template "> -->
-  
+
   <meta name="author" content="Themefisher.com">
 
   <title>Kappa Chakka Kandhari</title>
 
-<!-- Mobile Specific Meta
+  <!-- Mobile Specific Meta
   ================================================== -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/kcklogo.png" />
-  
+  <link rel="shortcut icon" type="image/x-icon" href="images/KCK Onam Logo.png" />
+
   <!-- CSS
   ================================================== -->
   <!-- Themefisher Icon font -->
@@ -151,13 +196,13 @@ section .container{
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body id="body">
 
- <!--
+  <!--
   Start Preloader
   ==================================== -->
   <div id="preloader">
@@ -169,37 +214,37 @@ section .container{
       <span></span>
       <span></span>
     </div>
-  </div> 
+  </div>
   <!--
   End Preloader
   ==================================== -->
 
 
-  
 
-<!--
+
+  <!--
 Fixed Navigation
 ==================================== -->
 
 
-<div class="modal fade" id="exampleModal" style="padding-right: 0!important;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="exampleModal" style="padding-right: 0!important;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document" >
     <div class="modal-content">
-      <!-- <div class="modal-header">
+      <div class="modal-header">
         <h5 class="modal-title" id="modal-title"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div> -->
+      </div>
       <div id="modal-body" class="modal-body">
         <a id="popuptext" href="https://thrivenow.in/kck-onam/" target="_blank" style="height: 100%; width: 100%;">
         <center>  
          
           <a onclick="$('#exampleModal,.modal-backdrop').hide()" href="#giftbox"><img style="width:100%;height: 100%;" class="popupimg" src="images/pop.jpeg" alt="">
           </a>
-          <!-- <br>
-          <br> -->
-          <!-- <a style="color:black" href="https://thrivenow.in/kck-onam/">Click here to Order Now</a> -->
+          <br>
+          <br>
+          <a style="color:black" href="https://thrivenow.in/kck-onam/">Click here to Order Now</a>
  </center>   
          
         </a>
@@ -209,43 +254,43 @@ Fixed Navigation
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-<header class="navigation fixed-top" style="background-color:rgba(0, 0, 0, 0);">
-  <div class="container">
-    <!-- main nav -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <!-- logo -->
-      <a class="navbar-brand logo" href="index.html">
-        <img class="logo-default" src="images/kcklogo.png"  height="90px" alt="logo"/>
-        <img class="logo-white" src="images/kcklogo.png" height="90px" alt="logo"/>
-      </a>
-      <!-- /logo -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <header class="navigation fixed-top" style="background-color:rgba(0, 0, 0, 0);">
+    <div class="container">
+      <!-- main nav -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- logo -->
+        <a class="navbar-brand logo" href="index.html">
+          <img class="logo-default" src="images/KCK Onam Logo.png" height="90px" alt="logo" />
+          <img class="logo-white" src="images/KCK Onam Logo.png" height="90px" alt="logo" />
+        </a>
+        <!-- /logo -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item">
-            <a class="nav-link" href="https://thrivenow.in/kck-onam/">Delivery & Pick Up</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dine In
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="https://thrivenow.in/kckonam-chennai/browse-menu/dine_in">
-                Chennai
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="https://thrivenow.in/kck-onam/">Delivery & Pick Up</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dine In
               </a>
-              <a class="dropdown-item" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/dine_in">
-                Bengaluru
-              </a>
-            </div>
-          </li>
-          <!-- <li class="nav-item dropdown active">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://thrivenow.in/kckonam-chennai/browse-menu/dine_in">
+                  Chennai
+                </a>
+                <a class="dropdown-item" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/dine_in">
+                  Bengaluru
+                </a>
+              </div>
+            </li>
+            <!-- <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Homepage
@@ -268,15 +313,15 @@ Fixed Navigation
           <li class="nav-item ">
             <a class="nav-link" href="team.html">Team</a>
           </li> -->
-          <!-- <li class="nav-item">
+            <!-- <li class="nav-item">
             <a class="nav-link"  style="font-size:110%;" href="dinein.html">Dine In</a>
           </li> -->
-          <!-- <li class="nav-item ">
+            <!-- <li class="nav-item ">
             <button id="popUp" style="float: right;" type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
               Pop-up
             </button>          </li> -->
-          
-          <!-- <li class="nav-item dropdown">
+
+            <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Pages
@@ -287,267 +332,410 @@ Fixed Navigation
               <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
             </div>
           </li> -->
-        </ul>
-      </div>
-    </nav>
-    <!-- /main nav -->
-  </div>
-</header>
-<!--
+          </ul>
+        </div>
+      </nav>
+      <!-- /main nav -->
+    </div>
+  </header>
+  <!--
 End Fixed Navigation
 ==================================== -->
 
 
-	
 
 
 
 
-<!--
+
+  <!--
 Start About Section
 ==================================== -->
 
 
-<!--
+  <!--
 Start About Section
 ==================================== -->
-<!--
+  <!--
 Start Call To Action
 ==================================== -->
-<center>
-  <img class="mobileImage" id="topimg" src="images/img3.jpg" style="width: 100%; height:20%" alt="">
+  <center>
+    <img class="mobileImage" id="topimg" src="images/img3.jpg" style="width: 100%; height:20%" alt="">
   </center>
-<section id="dinein" style="margin-top:0px ;padding:0px 0px;background-image: url(images/img3.jpg); background-position: 50% 0; background-size: cover;" class="call-to-action section">
-	<div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.75);height: 90%; width: 50%; margin-right: 0%;" class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<!-- <h2 style="margin-bottom:50px; ">Onasadhya <br> Feast in a Box</h2> -->
-				<!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p> -->
-        <p>This Harvest Season, Celebrate The Homecoming Of Kerala’s Legendary, Mythical King Mahabali with
-          Kappa Chakka Kandhari
+  <section id="dinein"
+    style="margin-top:0px ;padding:0px 0px;background-image: url(images/img3.jpg); background-position: 50% 0; background-size: cover;"
+    class="call-to-action section">
+    <div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.75);height: 90%; width: 50%; margin-right: 0%;"
+      class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- <h2 style="margin-bottom:50px; ">Onasadhya <br> Feast in a Box</h2> -->
+          <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p> -->
+          <p>This Harvest Season, Celebrate The Homecoming Of Kerala’s Legendary, Mythical King Mahabali with
+            Kappa Chakka Kandhari
           </p>
-        <h3 class="hlt">ONASADHYA AT KAPPA CHAKKA KANDHARI</h3>
-        <h3>(Dine-In Only)</h3>
-        <br>
-        <p>Traditional <span class="hlt">Onasadhya</span> with 26 vegetarian delicacies, prepared by Namboodiri cooks fromKerala
-          Enjoy this vegetarian feast at our restaurants in Chennai & Bengaluru. Rs 900 ++ per head  
+          <h3 class="hlt">Onasadhya Dine-in</h3>
+          <!-- <h3>(Dine-In Only)</h3> -->
+          <br>
+          <p>Traditional <span class="hlt">Onasadhya</span> with 26 vegetarian delicacies, prepared by traditional cooks
+            from Kerala
+            Enjoy this vegetarian feast at our restaurants in Chennai & Bengaluru. Rs 1190/- per head
           </p>
-        <p><b class="row"><span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>September 6, 7, 8, 2022</span>   <span class="col"><span class="hlt" style="text-decoration:underline">What?</span><br>Lunch & Dinner Dine-In Only</span> </b>
-        </p>
 
-        <h6 class="hlt" style="text-decoration:underline">Dine In Locations</h6>
-        <ul>
-          <li>• <span>Chennai</span> (Haddows Road)</li>
-          <li>• <span>Bengaluru</span> (Koramangala)</li>
-        </ul>
-<br>
-<h6 class="hlt" style="text-decoration:underline">Items</h6>
-<p>Uppu, Cheru Pazham, Chena Chops, Nendrakai Nuruku, Sharkara Varatty & Pavakka Kondattam
-  Manga Achar, Naranga Achar, Nellika Achar & Inji Puli, Beetroot Kichadi & Pineapple Pachadi
-  Olan, Cabbage Thoran, Avial, Koottu Kari, Nei-Parippu, Matta Red Rice, Kerala Sambar, Kalan, Pappadam & Rasam
-  Ada Pradhaman, Palada, Chakka Pradhaman & Parippu Payasam  
-</p>
+          <h6 class="hlt" style="text-decoration:underline">Dine In Locations</h6>
+          <ul class="flexUl">
+            <li class="scrollToMap"><u class="hlt">Bengaluru</u> <br>
+              St. John's Auditorium<br>
+              Silver Jublee Building Saint Johns Hospital, <br>
+              Internal Road, John Nagar, <br>
+              Koramangala, <br>
+              Bengaluru, Karnataka 560034<br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 636467 1010</span>
+            </li>
+            <li class="scrollToMap"><u class="hlt">Chennai</u> <br>
+              Marthoma Church Auditorium <br>
+              adjacent to MCC School,<br>
+              78, Harrington Rd, Chetpet, <br>
+              Chennai, Tamil Nadu 600031<br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 98585 91010</span>
+            </li>
+          </ul>
+          <br>
+          <p><b class="row"><span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>August
+                28, 29, 2023</span> <span class="col"><span class="hlt"
+                  style="text-decoration:underline">What?</span><br>Lunch Dine-In Only</span> </b>
+          </p>
+          <h6 class="hlt" style="text-decoration:underline">Items</h6>
+          <p class="readmore">Uppu, Cheru Pazham, Chena Chops, Nendrakai Nuruku, Sharkara Varatty & Pavakka
+            Kondattam<span class="ellipsis">...</span> <span class="moreText">
+              Manga Achar, Naranga Achar, Nellika Achar & Inji Puli, Beetroot Kichadi & Pineapple Pachadi
+              Olan, Cabbage Thoran, Avial, Koottu Kari, Nei-Parippu, Matta Red Rice, Kerala Sambar, Kalan, Pappadam &
+              Rasam
+              Ada Pradhaman, Palada, Chakka Pradhaman & Parippu Payasam
+            </span><a class="more" href="javascript:void(0)">Read More</a>
+          </p>
 
 
 
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kckonam-chennai/browse-menu/dine_in">Order Now - Chennai</a>
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/dine_in">Order Now - Bengaluru</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-chennai/browse-menu/dine_in">Book Now - Chennai</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/dine_in">Book Now - Bengaluru</a>
 
-        <!-- <a href="" class="btn btn-main">Contact Us</a> -->
-			</div>
-		</div> 		<!-- End row -->
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
+          <!-- <a href="" class="btn btn-main">Contact Us</a> -->
+        </div>
+      </div> <!-- End row -->
+    </div> <!-- End container -->
+  </section> <!-- End section -->
 
-<!--
+  <!--
 Start Call To Action
 ==================================== -->
-<center>
-  <img class="mobileImage" src="images/giftbox.jpg" style="width: 100%; height:20%" alt="">
-</center>
-<section id="takeaway" style="margin-top:0px ;padding:0px 0px;background-image: url(images/giftbox.jpg); background-position: 50% 0; background-size: cover;" class="call-to-action section">
-  <div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.8);height: 90%; width: 50%; margin:0px 0px 0px auto;" class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-        <h3 class="hlt">ONASADHYA FESTIVE MEAL IN A BOX</h3>
-        <h3>(Take-Away Only)</h3>
-        <br>
-        <p>Traditional <span class="hlt">Onasadhya Festive Meal In a Box</span>
-          26 vegetarian delicacies prepared by Namboodiri cooks from Kerala
-          Savour this vegetarian feast at home
-        </p>
-        <p>Sufficient for 5 persons. Packed in stainless containers, in a hot box. Rs 4950++ per box 
-        </p>
-        <br>
-        <p>
-          <b class="row">
-          <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>September 6, 7, 8, 2022</span> <span class="col"><span class="hlt" style="text-decoration:underline">What?</span><br>Lunch & Dinner Take-Away Only</span>  
-          </b>
-        </p>
-        <h6 class="hlt" style="text-decoration:underline">Pick Up Locations</h6>
-        <ul>
-          <li>• <span>Chennai</span> (Haddows Road)</li>
-          <li>• <span>Bengaluru</span> (Koramangala)</li>
-        </ul>
-        <br>
-        <h6 class="hlt" style="text-decoration:underline">Items</h6>
-        <p>
-          Uppu, Cheru Pazham, Chena Chops, Nendrakai Nuruku, Sharkara Varatty & Pavakka Kondattam
-          Manga Achar, Naranga Achar, Nellika Achar & Inji Puli, Beetroot Kichadi & Pineapple Pachadi
-          Olan, Cabbage Thoran, Avial, Koottu Kari, Nei-Parippu, Matta Red Rice, Kerala Sambar, Kalan, Pappadam & Rasam 
-          Ada Pradhaman, Palada, Chakka Pradhaman & Parippu Payasam
-        </p>
-        <!-- <p class="hlt">
-          The onasadhya box is available for take away only (no home delivery) from our outlets in Chennai (haddows road) and (Bangalore Koramangala).
+  <center>
+    <img class="mobileImage" src="images/giftbox.jpg" style="width: 100%; height:20%" alt="">
+  </center>
+  <section id="takeaway"
+    style="margin-top:0px ;padding:0px 0px;background-image: url(images/giftbox.jpg); background-position: 50% 0; background-size: cover;"
+    class="call-to-action section">
+    <div
+      style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.8);height: 90%; width: 50%; margin:0px 0px 0px auto;"
+      class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="hlt">Onasadhya Take-Away (Festive meal in a box)</h3>
+          <!-- <h3>(Take-Away Only)</h3> -->
+          <br>
+          <p>Traditional <span class="hlt">Onasadhya Festive Meal In a Box</span>
+            26 vegetarian delicacies prepared by traditional cooks from Kerala
+            Savour this vegetarian feast at home
+          </p>
+          <p>Sufficient for 5 persons. Packed in stainless containers, in a hot box. Rs 5750/- per box
+          </p>
+          <br>
+
+          <h6 class="hlt" style="text-decoration:underline">Pick Up Locations</h6>
+          <ul class="flexUl">
+            <li class="scrollToMap"><u class="hlt">Bengaluru</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              438, 18th Main Rd, 6th Block, <br>
+              Koramangala, Bengaluru, <br>
+              Karnataka - 560095 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 636467 1010</span>
+            </li>
+            <li class="scrollToMap"><u class="hlt">Chennai</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              10, Haddows Road, Nungambakkam, <br>
+              Chennai, Tamil Nadu - 600006 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 98585 91010</span>
+            </li>
+          </ul>
+          <br>
+          <p>
+            <b class="row">
+              <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>August 28,29
+                2023</span> <span class="col"><span class="hlt" style="text-decoration:underline">What?</span><br>Lunch
+                Take-Away Only</span>
+            </b>
+          </p>
+          <h6 class="hlt" style="text-decoration:underline">Items</h6>
+          <p class="readmore">
+            Uppu, Cheru Pazham, Chena Chops, Nendrakai Nuruku, Sharkara Varatty & Pavakka Kondattam<span
+              class="ellipsis">...</span> <span class="moreText">
+              Manga Achar, Naranga Achar, Nellika Achar & Inji Puli, Beetroot Kichadi & Pineapple Pachadi
+              Olan, Cabbage Thoran, Avial, Koottu Kari, Nei-Parippu, Matta Red Rice, Kerala Sambar, Kalan, Pappadam &
+              Rasam
+              Ada Pradhaman, Palada, Chakka Pradhaman & Parippu Payasam
+            </span><a class="more" href="javascript:void(0)">Read More</a>
+          </p>
+          <!-- <p class="hlt">
+          The onasadhya box is available for take away only (no home delivery) from our outlets in Chennai (haddows road) and (Bengaluru Koramangala).
         </p> -->
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now - Chennai</a>
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now - Bengaluru</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-chennai/browse-menu/take_away">Order Now - Chennai</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/take_away">Order Now -
+            Bengaluru</a>
 
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <center>
+    <img class="mobileImage" src="images/gblandscape.JPG" style="width: 100%; height:20%" alt="">
+  </center>
+  <section id="giftbox"
+    style="margin-top:0px ;padding:0px 0px;background-image: url(images/gblandscape.JPG); background-position: 50% 0; background-size: cover;"
+    class="call-to-action section">
+    <div
+      style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.8);height: 90%; width: 50%; margin:0px 0px 0px auto;"
+      class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="hlt">ONAM GIFT BOX</h3>
+          <h3>(Take-Away & Delivery)</h3>
+          <br>
+          <p>
+            Perfect gift for your loved ones. Onam Gift Box Rs 3000/-
+          </p>
+
+          <h6 class="hlt" style="text-decoration:underline">Delivery & Pick Up</h6>
+          <ul class="flexUl">
+            <li class="scrollToMap"><u class="hlt">Bengaluru</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              438, 18th Main Rd, 6th Block, <br>
+              Koramangala, Bengaluru, <br>
+              Karnataka - 560095 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 636467 1010</span>
+            </li>
+            <li class="scrollToMap"><u class="hlt">Chennai</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              10, Haddows Road, Nungambakkam, <br>
+              Chennai, Tamil Nadu - 600006 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 98585 91010</span>
+
+            </li>
+          </ul>
+          <br>
+          <p>
+            <b class="row">
+              <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>August 28,29,
+                2023</span> <span class="col"><span class="hlt" style="text-decoration:underline">How?</span><br>On
+                Advanced Booking Only</span>
+            </b>
+          </p>
+          <p>
+          <h6 class="hlt" style="text-decoration:underline">Each Onam Gift Box contains :</h6>
+          <br>
+          <ul type="disc">
+            <li><b class="hlt">4 Payasams</b> (500 ml each) Ada Pradhaman, Chakka Pradhaman, Payaru Payasam & Palada
+            </li>
+            <li><b class="hlt">4 Pickles</b> (200 gmseach) Manga Achar, Naranga Achar, Nellika Achar & Inji Puli</li>
+            <li><b class="hlt">4 varieties of Kerala Chips</b> (100 gms each) Chena Chops, Nendrakai Nuruku, Sharkara
+              Varatty & Pavakka Kondattam)</li>
+            <li><b class="hlt">1 special Onakkodi</b> festive mundu</li>
+          </ul>
+          </p>
+
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-chennai/browse-menu/delivery">Order Now - Chennai</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/delivery">Order Now - Bengaluru</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <center>
+    <img class="mobileImage" src="images/payasambg.jpg" style="width: 100%; height:20%" alt="">
+  </center>
+  <section id="payasam"
+    style="margin-top:0px ;padding:0px 0px;background-image: url(images/payasambg.jpg); background-position: 50% 0; background-size: cover;"
+    class="call-to-action section">
+    <div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.5);height: 90%; width: 50%; margin-right: 0%;"
+      class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- <h2 style="margin-bottom:50px; ">Onasadhya <br> Feast in a Box</h2> -->
+          <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p> -->
+          <h3 class="hlt">ONAM SPECIAL PAYASAM</h3>
+          <h3>(Take-Away & Delivery)</h3>
+          <br>
+          <p>
+            Sweeten the festivities with our classic Kerala Payasams this Onam
+            Rs 800/- for 1 litre / Rs 400/- for 500 ml
+          </p>
+
+          <h6 class="hlt" style="text-decoration:underline">Delivery & Pick Up</h6>
+          <ul class="flexUl">
+            <li class="scrollToMap"><u class="hlt">Bengaluru</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              438, 18th Main Rd, 6th Block, <br>
+              Koramangala, Bengaluru, <br>
+              Karnataka - 560095 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 636467 1010</span>
+            </li>
+            <li class="scrollToMap"><u class="hlt">Chennai</u><br>
+              Kappa Chakka Kandhari Restaurant,<br>
+              10, Haddows Road, Nungambakkam, <br>
+              Chennai, Tamil Nadu - 600006 <br>
+              <span class="hlt" style="font-weight: 400;">Ph. No: +91 98585 91010</span>
+            </li>
+          </ul>
+          <br>
+          <p>
+            <b class="row">
+              <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>August 28,29,
+                2023</span> <span class="col"><span class="hlt" style="text-decoration:underline">How?</span><br>On
+                Advanced Booking Only</span>
+            </b>
+          </p>
+          <p class="row" style="font-weight:700;">
+          </p>
+          <p>
+            Delicious Payasams from across Kerala, to relish or gift your loved ones. Available in bottles of 1 litre &
+            500 ml
+          <ul>
+            <li><span class="hlt">Ada Pradhaman</span> - Ada simmered with jaggery &coconut milk
+            </li>
+            <li><span class="hlt">Chakka Pradhaman</span> - Chakka Varatti or jackfruit pulp, slow-cooked in coconut
+              milk& sweetened with jaggery
+            </li>
+            <li><span class="hlt">Payaru Payasam</span> - Green moong & jaggery, cooked in coconut milk, flavoured
+              with cardamom, topped with coconut bits
+            </li>
+            <li><span class="hlt">Palada</span> - Ada, simmered in milk and sugar, garnished with cashew
+            </li>
+          </ul>
+          </p>
+          <p><b>Onashamsakal from Kappa Chakka Kandhari</b></p>
+
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-chennai/browse-menu/delivery">Order Now - Chennai</a>
+          <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow"
+            target="_blank" href="https://thrivenow.in/kckonam-bengaluru/browse-menu/delivery">Order Now - Bengaluru</a>
+
+          <!-- <a href="" class="btn btn-main">Contact Us</a> -->
+        </div>
+      </div> <!-- End row -->
+    </div> <!-- End container -->
+  </section> <!-- End section -->
+
+  <div class="row" id="mapDiv"
+    style="height: 60%; width: 100%; padding: 100px 10px 100px 10px;margin: 0;background-color: rgba(0, 0, 0, 0.2);">
+    <div class="col-lg-8" style="margin-right: auto; margin-left: auto;">
+      <div style="display:flex; justify-content: space-between;">
+        <div style="width: 100%">
+          <h4>Dine-In Chennai</h4>
+          <iframe width="90%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Madras%20Mar%20Thoma%20Syrian%20Church+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+              href="https://www.maps.ie/population/">Population calculator map</a></iframe>
+        </div>
+        <div style="width: 100%">
+          <h4>Dine-In Bengaluru</h4>
+          <div style="width: 100%"><iframe width="90%" height="200" frameborder="0" scrolling="no" marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=90%25&amp;height=600&amp;hl=en&amp;q=St.%20John's%20Auditorium,%20koramangala+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                href="https://www.maps.ie/population/">Find Population on Map</a></iframe>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; justify-content: space-between; margin-top: 40px;">
+        <div style="width: 100%">
+          <h4>Take-Away Chennai</h4><iframe width="90%" height="200" frameborder="0" scrolling="no" marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=10,%20Haddows%20Road,%20Nungambakkam+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+              href="https://www.maps.ie/population/">Calculate population in area</a></iframe>
+        </div>
+        <div style="width: 100%">
+          <h4>Take-Away Bengaluru</h4><iframe width="90%" height="200" frameborder="0" scrolling="no" marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=438,%2018th%20Main%20Rd,%206th%20Block,Koramangala+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+              href="https://www.maps.ie/population/">Find Population on Map</a></iframe>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<center>
-  <img class="mobileImage" src="images/gblandscape.JPG" style="width: 100%; height:20%" alt="">
-</center>
-<section id="giftbox" style="margin-top:0px ;padding:0px 0px;background-image: url(images/gblandscape.JPG); background-position: 50% 0; background-size: cover;" class="call-to-action section">
-  <div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.8);height: 90%; width: 50%; margin:0px 0px 0px auto;" class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-        <h3 class="hlt">ONAM GIFT BOX</h3>
-        <h3>(Take-Away & Delivery)</h3>
-        <br>
-        <p>
-          Perfect gift for your loved ones. Onam Gift Box Rs 2500 ++
-        </p>
-        <p>
-          <b class="row">
-          <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>September 6 to 8, 2022</span> <span class="col"><span class="hlt" style="text-decoration:underline">How?</span><br>On Advanced Booking Only</span>  
-          </b>
-        </p>
-        <h6 class="hlt" style="text-decoration:underline">Delivery & Pick Up</h6>
-        <ul>
-          <li>• <span>Chennai</span> (Haddows Road)</li>
-          <li>• <span>Bengaluru</span> (Koramangala)</li>
-        </ul>
-        <br>
-       <p>
-        <h6 class="hlt" style="text-decoration:underline">Each Onam Gift Box contains :</h6>
-        <br>
-        <ul type="disc">
-          <li>•	<b class="hlt">4 Payasams</b> (500 ml each) Ada Pradhaman, Chakka Pradhaman, Payaru Payasam & Palada</li>
-          <li>• <b class="hlt">4 Pickles</b> (200 gmseach) Manga Achar, Naranga Achar, Nellika Achar & Inji Puli</li>
-          <li>• <b class="hlt">4 varieties of Kerala Chips</b> (100 gms each) Chena Chops, Nendrakai Nuruku, Sharkara Varatty & Pavakka Kondattam)</li>
-          <li>• <b class="hlt">1 special Onakkodi</b> festive mundu</li>
-        </ul>
-       </p>
-
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<center>
-<img class="mobileImage" src="images/payasambg.jpg" style="width: 100%; height:20%" alt="">
-</center>
-<section id="payasam" style="margin-top:0px ;padding:0px 0px;background-image: url(images/payasambg.jpg); background-position: 50% 0; background-size: cover;" class="call-to-action section">
-	<div style="padding:160px 13px;background-color: rgba(0, 0, 0, 0.5);height: 90%; width: 50%; margin-right: 0%;" class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<!-- <h2 style="margin-bottom:50px; ">Onasadhya <br> Feast in a Box</h2> -->
-				<!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p> -->
-        <h3 class="hlt">ONAM SPECIAL PAYASAM</h3>
-        <h3>(Take-Away & Delivery)</h3>
-        <br>
-        <p>
-          Sweeten the festivities with our classic Kerala Payasams this Onam
-          Rs 700 ++ for 1 litre / Rs 375 ++ for 500 ml 
-        </p>
-        <p>
-          <b class="row">
-          <span class="col"><span class="hlt" style="text-decoration:underline">When?</span><br>September 6 to 8, 2022</span> <span class="col"><span class="hlt" style="text-decoration:underline">How?</span><br>On Advanced Booking Only</span>  
-          </b>
-        </p>
-        <h6 class="hlt" style="text-decoration:underline">Delivery & Pick Up</h6>
-        <ul>
-          <li>• <span>Chennai</span> (Haddows Road)</li>
-          <li>• <span>Bengaluru</span> (Koramangala)</li>
-        </ul>
-        <br>
-        <p class="row" style="font-weight:700;">
-       </p>
-       <p>
-        Delicious Payasams from across Kerala, to relish or gift your loved ones. Available in bottles of 1 litre & 500 ml 
-        <ul>
-          <li>• <span class="hlt">Ada Pradhaman</span> - Ada simmered with jaggery &coconut milk
-          </li>
-          <li>• <span class="hlt">Chakka Pradhaman</span> - Chakka Varatti or jackfruit pulp, slow-cooked in coconut milk& sweetened with jaggery
-          </li>
-          <li>• <span class="hlt">Payaru Payasam</span> - Green moong & jaggery, cooked in coconut milk, flavoured with cardamom, topped with coconut bits
-          </li>
-          <li>• <span class="hlt">Palada</span>  - Ada, simmered in milk and sugar, garnished with cashew
-          </li>
-        </ul>
-       </p>
-        <p><b>Onashamsakal from Kappa Chakka Kandhari</b></p>
-
-        <a style="margin-top: 50px; border-radius: 20px;padding: 10px 25px;" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now</a>
-
-        <!-- <a href="" class="btn btn-main">Contact Us</a> -->
-			</div>
-		</div> 		<!-- End row -->
-	</div>   	<!-- End container -->
-</section>   <!-- End section -->
-
-
-<div class="hero-slider">
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(images/img1.jpg); background-position: 50% 0;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<!-- <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
+  <div class="hero-slider">
+    <div class="slider-item th-fullpage hero-area"
+      style="background-image: url(images/img1.jpg); background-position: 50% 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
             Experience</h1> -->
-            <a  style="border-radius: 20px;padding: 10px 25px;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now</a>
-					<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0"><br>Celebrate the harvest festival at home.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="slider-item th-fullpage hero-area" style="background-image: url(images/img2.jpg); background-position: 50% 0;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-          <a  style="border-radius: 20px;padding: 10px 25px;" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0" class="btn btn-warning orderNow" target="_blank" href="https://thrivenow.in/kck-onam/">Order Now</a>
-					<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0"><br> Celebrate the harvest festival at home.</p>
+            <a style="border-radius: 20px;padding: 10px 25px;" data-duration-in=".3" data-animation-in="fadeInUp"
+              data-delay-in="0" class="btn btn-warning orderNow" target="_blank"
+              href="https://thrivenow.in/kck-onam/">Order Now</a>
+            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0"><br>Celebrate the harvest festival
+              at home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-item th-fullpage hero-area"
+      style="background-image: url(images/img2.jpg); background-position: 50% 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a style="border-radius: 20px;padding: 10px 25px;" data-duration-in=".3" data-animation-in="fadeInUp"
+              data-delay-in="0" class="btn btn-warning orderNow" target="_blank"
+              href="https://thrivenow.in/kck-onam/">Order Now</a>
+            <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in="0"><br> Celebrate the harvest festival
+              at home.</p>
 
-					<!-- <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design <br> and
+            <!-- <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design <br> and
 						Creativity</h1>
 					<p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Create just What you need
 						for your Perfect Website. Choose from a wide range
 						<br> of Elements & simply put them on our Canvas.</p>
 					<a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main" href="service.html">Explore Us</a> -->
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-<!--
+  <!--
 		Start Counter Section
 		==================================== -->
-		
-<div class="row" style="height: 60%; width: 100%; padding: 100px 10px;margin: 0;background-color: rgba(0, 0, 0, 0.2);">
-	<div class="col-lg-8" style="margin-right: auto; margin-left: auto;">
-	<center>
-		<!-- <iframe width="100%" height="455" src="https://www.youtube.com/embed/ovWk9rprnYE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	</center> -->
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://player.vimeo.com/video/740446019?h=9bcfce7f2a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="100%" allowfullscreen allow="autoplay"> </iframe> </div>
-	</div>
-	<!-- <div class="col-lg-1"></div>
+
+  <!-- <div class="row"
+    style="height: 60%; width: 100%; padding: 100px 10px;margin: 0;background-color: rgba(0, 0, 0, 0.2);">
+    <div class="col-lg-8" style="margin-right: auto; margin-left: auto;">
+      <center>
+        <iframe width="100%" height="455" src="https://www.youtube.com/embed/ovWk9rprnYE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	</center>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe
+            style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0"
+            type="text/html"
+            src="https://player.vimeo.com/video/740446019?h=9bcfce7f2a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            width="100%" height="100%" allowfullscreen allow="autoplay"> </iframe> </div>
+    </div>
+    <div class="col-lg-1"></div>
 	<div class="col-lg-4" style="padding: 100px 0px;" >
 		<center>
 			<h3>
@@ -557,83 +745,99 @@ Start Call To Action
 				helloo hi bye
 			</p>
 		</center>
-	</div> -->
+	</div>
 
-</div>
+  </div> -->
 
-<footer id="footer" class="bg-one">
-	<div style="padding: 30px 0px;" class="top-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<center>  <img style="margin-top:20px" src="images/kcklogo.png" height="120px" alt="">
-</center>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<center>
-							 <h3>Contact</h3>
-               <p style="padding: 0;"> For Enquiries, contact : <br>
-                Chennai: 
+
+
+  <section id="note" style="margin-top:0px ;padding:0px 0px;" class="call-to-action section">
+    <center>
+      <h2 class="hlt" style="font-weight: normal;padding: 35px 0;">Please note that all reservations are final and non-refundable</h2>
+    </center>
+  </section> <!-- End section -->
+
+
+  <footer id="footer" class="bg-one">
+    <div style="padding: 30px 0px;" class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <center> <img style="margin-top:20px" src="images/KCK Onam Logo.png" height="120px" alt="">
+            </center>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <center>
+              <h3>Contact</h3>
+              <p style="padding: 0;"> For Enquiries, contact : <br>
+                Chennai:
                 10,Haddows road, <span class="br"><br style="display: none;"></span> Chennai-600006<br>
                 Ph.no:98585 91010<br>
-                Bangalore: 
-                6th Block, Koramangala, <span class="br"><br style="display: none;"></span>Bangalore-560095<br>
+                Bengaluru:
+                6th Block, Koramangala, <span class="br"><br style="display: none;"></span>Bengaluru-560095<br>
                 Ph.no: 636467 1010<br>
-            </p>
-					</center>
-			 
-				</div>
-				<!-- End of .col-sm-3 -->
+              </p>
+            </center>
+
+          </div>
+          <!-- End of .col-sm-3 -->
 
 
 
 
-			</div>
-		</div> <!-- end container -->
-	</div>
- 
-</footer> <!-- end footer -->
+        </div>
+      </div> <!-- end container -->
+    </div>
+
+  </footer> <!-- end footer -->
 
 
-    <!-- end Footer Area
+  <!-- end Footer Area
     ========================================== -->
-    
 
-    
-    <!-- 
+
+
+  <!-- 
     Essential Scripts
     =====================================-->
-    <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-    <script  src="plugins/google-map/gmap.js"></script>
+  <!-- Main jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Form Validation -->
+  <script src="plugins/form-validation/jquery.validate.min.js"></script>
+  <!-- Bootstrap4 -->
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Parallax -->
+  <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+  <!-- lightbox -->
+  <!-- Owl Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- filter -->
+  <!-- Smooth Scroll js -->
+  <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
 
-    <!-- Form Validation -->
-    <script src="plugins/form-validation/jquery.form.js"></script> 
-    <script src="plugins/form-validation/jquery.validate.min.js"></script>
-    
-    <!-- Bootstrap4 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Parallax -->
-    <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
-    <!-- lightbox -->
-    <script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="plugins/slick/slick.min.js"></script>
-    <!-- filter -->
-    <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
-    <!-- Smooth Scroll js -->
-    <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-    
-    <!-- Custom js -->
-    <script src="js/script.js"></script>
-    <script type="text/javascript">
-      $(window).on('load', function() {
-          $('#exampleModal').modal('show');
+  <!-- Custom js -->
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+    $(window).on('load', function () {
+      $('#exampleModal').modal('show');
+    });
+    $(function () {
+      $('.readmore a.more').on('click', function () {
+        var $parent = $(this).parent();
+        if ($parent.data('visible')) {
+          $parent.data('visible', false).find('.ellipsis').show()
+            .end().find('.moreText').hide()
+            .end().find('a.more').text('Read More');
+        } else {
+          $parent.data('visible', true).find('.ellipsis').hide()
+            .end().find('.moreText').show()
+            .end().find('a.more').text('Read Less');
+        }
       });
+    });
   </script>
-  </body>
-  
+</body>
+
 <!-- Mirrored from kckonam.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 13:12:01 GMT -->
+
 </html>

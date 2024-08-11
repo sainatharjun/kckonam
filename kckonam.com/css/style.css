@@ -28,10 +28,6 @@ transform: translateX(0%);
 
 
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600");
-@font-face {
-  font-family: font;
-  src: url(../unicode.arialr.ttf);
-}
 .slideanim {
   visibility:hidden;
   visibility:visible\9;/*For old IE browsers IE6-8 */
@@ -108,7 +104,7 @@ border-radius: 9mm;
   background-color: rgb(255, 72, 0);;
 }
 h1,h2,h3,h4,h5,h6,p{
-  font-family: font!important;
+  font-family: 'Montserrat'!important;
 }
 body {
   
@@ -118,7 +114,7 @@ body {
   background-position: center;
 
   line-height: 1.4;
-  font-family: font!important;
+  font-family: 'Montserrat'!important;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1037,7 +1033,27 @@ a:focus, a:hover {
   font-size: 14px;
   border-radius: 0;
 }
+h1,h2,h3{
+  font-weight: 800;
+}
+h4,h5,h6{
+  font-weight: 500;
+}
+.readmore .moreText {
+  display:none;
+}
+.readmore a.more {
+  display:block;
+}
+.flexUl{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
 
+.flexUl li{
+  flex: 1;
+}
 .contact-form input:hover,
 .contact-form textarea:hover,
 .contact-form #contact-submit:hover {
@@ -1790,6 +1806,9 @@ a:focus, a:hover {
   .comment-list-item .comment-btn {
     position: unset;
   }
+  .readmore .moreText {
+    display:none;
+  }
 }
 
 .comment-list-item .comment-btn:hover {
@@ -2190,7 +2209,9 @@ a:focus, a:hover {
 .page-404 h1 {
   font-size: 200px;
 }
-
+.scrollToMap{
+  cursor: pointer;
+}
 /*============================================================
 	For Small Desktop
 ==============================================================*/
@@ -2198,9 +2219,15 @@ a:focus, a:hover {
   .counters-item:before {
     display: none;
   }
+  .readmore .moreText {
+    display:none;
+  }
 }
 
 @media (min-width: 980px) and (max-width: 1150px) {
+  .readmore .moreText {
+    display:none;
+  }
   /* parallax section */
   .parallax-section {
     background-position: center top !important;
@@ -2522,3 +2549,6 @@ a:focus, a:hover {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+.logo-default{
+  max-height: 60px;
+}

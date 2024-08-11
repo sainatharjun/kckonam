@@ -231,7 +231,7 @@ function getBookings(){
   // 	document.getElementById('preloader').style.display = 'none';
   // }
 
-  $(window).on('load', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     $('#preloader').fadeOut('slow', function () {
       $(this).remove();
     });
@@ -417,6 +417,13 @@ function getBookings(){
   });
 
 })(jQuery);
+
+$('.scrollToMap').on('click',()=>{
+  document.getElementById('mapDiv').scrollIntoView({
+    behavior: "smooth", // or "auto" or "instant"
+    block: "start" // or "end"
+})
+})
 
 
 
