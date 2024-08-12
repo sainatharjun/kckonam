@@ -96,6 +96,13 @@
     .modal-open,
     .show {
       padding: 0 !important;
+      /* remove */
+      overflow: hidden!important;
+    }
+      /* remove */
+    body{
+      height: 100vh;
+      overflow: hidden!important;
     }
 
     @media (min-width: 576px) {
@@ -812,6 +819,9 @@ Start Call To Action
   <script type="text/javascript">
     $(window).on('load', function () {
       $('#exampleModal').modal('show');
+      document.addEventListener('scroll',(e)=>{
+        e.preventDefault()
+      })
     });
     $(document).ready(function() {
         $('#exampleModal').modal({
