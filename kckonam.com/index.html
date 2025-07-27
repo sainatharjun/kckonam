@@ -703,39 +703,40 @@ Start Call To Action
       <div style="padding: 80px 0; background-color: rgba(0, 0, 0, 0.75); width: 100%; margin: 0 auto; border-radius: 0;">
         <div class="corporate-form-wrapper">
           <div class="corporate-form-title">Bulk Order Enquiry</div>
-          <form id="corporateForm" autocomplete="off">
+          <form id="corporateForm" autocomplete="off" method="POST" target="_self" action="https://docs.google.com/forms/d/e/1FAIpQLSeW1Mii2SF-sS5hlh4IAUjWGKsv9SxRnUvRAxBXWhI3M-SHQg/formResponse" onsubmit="return showAlert()">
             <div class="corporate-form-group">
-              <label for="name">Name <span style="color: #ffb300;">*</span></label>
-              <input type="text" id="name" name="name" required>
+              <label for="entry_2005620554">Name</label>
+              <input type="text" id="entry_2005620554" name="entry.1228273850">
             </div>
             <div class="corporate-form-group">
-              <label for="company">Company Name</label>
-              <input type="text" id="company" name="company" required>
+              <label for="entry_1045781291">Company Name</label>
+              <input type="text" id="entry_1045781291" name="entry.1197793218">
             </div>
             <div class="corporate-form-group">
-              <label for="mobile">Mobile Number <span style="color: #ffb300;">*</span></label>
-              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+              <label for="entry_1166974658">Mobile Number</label>
+              <input type="tel" id="entry_1166974658" name="entry.126397814">
             </div>
             <div class="corporate-form-group">
-              <label for="email">Email <span style="color: #ffb300;">*</span></label>
-              <input type="email" id="email" name="email" required>
+              <label for="entry_1065046570">Email</label>
+              <input type="email" id="entry_1065046570" name="entry.1532485352">
             </div>
             <div class="corporate-form-group">
-              <label for="employees">No. of Employees</label>
-              <input type="number" id="employees" name="employees" min="1" required>
+              <label for="entry_839337160">No. of Employees</label>
+              <input type="number" id="entry_839337160" name="entry.283469898">
             </div>
             <div class="corporate-form-group">
-              <label for="date">Order Requirement Date</label>
-              <input type="date" id="date" name="date" required>
+              <label for="entry_1166974659">Order Requirement Date</label>
+              <input type="date" id="entry_1166974659" name="entry.1053519972">
             </div>
             <div class="corporate-form-group">
-              <label for="remarks">Requirements</label>
-              <textarea id="remarks" name="remarks" rows="3"></textarea>
+              <label for="entry_839337161">Requirements</label>
+              <textarea id="entry_839337161" name="entry.1092801025" rows="3"></textarea>
             </div>
             <div class="corporate-form-submit">
               <button type="submit">Submit</button>
             </div>
           </form>
+          <!-- Success Popup removed -->
         </div>
       </div>
     </section>
@@ -858,6 +859,39 @@ Start Call To Action
     ========================================== -->
 
     <style>
+      /* Success Popup Overlay Styles */
+      .form-success-popup-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s;
+      }
+      .form-success-popup-overlay[style*="display: flex"] {
+        display: flex !important;
+      }
+      .form-success-popup-box {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+        text-align: center;
+        max-width: 90vw;
+        min-width: 240px;
+      }
+      .form-success-popup-box h2 {
+        color: #28ABE3;
+        margin-bottom: 18px;
+      }
+      .form-success-popup-box p {
+        color: #333;
+        font-size: 1.1em;
+      }
       .footer-flex-row {
         display: flex;
         flex-direction: row;
@@ -914,6 +948,13 @@ Start Call To Action
 
     <!-- Custom js -->
     <script src="js/script.js"></script>
+    <script>
+      // Show alert on submit and allow form to submit
+      function showAlert() {
+        alert('Your enquiry has been submitted successfully.');
+        return true;
+      }
+    </script>
     <script type="text/javascript">
       $(window).on("load", function () {
         $("#exampleModal").modal("show");
