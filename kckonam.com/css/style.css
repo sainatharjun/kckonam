@@ -532,10 +532,6 @@ a:focus, a:hover {
   transition: .3s all;
 }
 
-.navigation .logo-default {
-  display: none;
-}
-
 .navigation .navbar-light .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-size: 14px;
