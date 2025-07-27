@@ -1,3 +1,73 @@
+/* Custom map carousel arrows */
+.custom-map-arrow {
+  background: #ff9800 !important;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  color: #fff!important;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.custom-map-arrow.slick-prev {
+          left: -10px;
+        top: 168px;
+}
+.custom-map-arrow.slick-next {
+          right: -10px;
+        top: 168px;
+}
+.custom-map-arrow:hover, .custom-map-arrow:focus {
+  background: #ff6600!important;
+  color: #fff!important;
+  outline: none;
+  box-shadow: 0 4px 16px rgba(255,102,0,0.2);
+}
+@media (max-width: 768px) {
+  .custom-map-arrow {
+    width: 42px!important;
+    height: 42px!important;
+    font-size: 1.5rem!important;
+  }
+  .custom-map-arrow.slick-prev{
+          left: -10px;
+        top: 168px;
+}
+  .custom-map-arrow.slick-next {
+          right: -10px;
+        top: 168px;
+}
+}
+/* Map section responsive styles */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 32px;
+}
+.map-carousel {
+  display: none;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .map-grid {
+    display: none !important;
+  }
+  .map-carousel {
+    display: block;
+  }
+  .map-carousel .slick-slide {
+    outline: none;
+  }
+}
 .align-left {
   float:left;
   margin-right:20px;
@@ -2209,7 +2279,7 @@ h4,h5,h6{
   cursor: pointer;
 }
 /*============================================================
-	For Small Desktop
+  For Small Desktop
 ==============================================================*/
 @media (min-width: 700px) and (max-width: 1090px) {
   .counters-item:before {
@@ -2274,7 +2344,7 @@ h4,h5,h6{
     }
 }
 /*============================================================
-	Tablet (Portrait) Design for a width of 768px
+  Tablet (Portrait) Design for a width of 768px
 ==============================================================*/
 @media (min-width: 768px) and (max-width: 979px) {
   .counters-item:before {
@@ -2344,7 +2414,7 @@ h4,h5,h6{
 }
 
 /*============================================================
-	Mobile (Portrait) Design for a width of 320px
+  Mobile (Portrait) Design for a width of 320px
 ==============================================================*/
 @media only screen and (max-width: 767px) {
   .counters-item:before {
@@ -2486,7 +2556,7 @@ h4,h5,h6{
 }
 
 /*============================================================
-	Mobile (Landscape) Design for a width of 480px
+  Mobile (Landscape) Design for a width of 480px
 ==============================================================*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .title h2 {
