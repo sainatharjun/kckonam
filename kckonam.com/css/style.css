@@ -49,9 +49,9 @@
 /* Map section responsive styles */
 .map-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 240px);
   grid-template-rows: repeat(3, auto);
-  gap: 32px;
+  gap: 8px;
 }
 .map-carousel {
   display: none;
@@ -565,7 +565,7 @@ a:focus, a:hover {
 }
 .hlt{
   color:#ffc107;
-  font-weight: bolder;
+  font-weight: normal;
 }
 .slick-slide {
   outline: none;
@@ -2620,4 +2620,41 @@ h4,h5,h6{
 }
 .oll li{
   text-align: left;
+}
+
+/* --- Custom overrides and additions for Onam 2025 --- */
+.btns a {
+  font-size: 24px;
+  padding: 8px 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+.section-title, .title h2 {
+  font-weight: 800 !important;
+}
+.navigation .navbar-light .navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  font-family: 'Catamaran', 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.map-section-text {
+  color: #111;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.map-grid p, .map-grid h4 {
+  color: #111 !important;
+  font-size: 0.95em !important;
+}
+.map-grid iframe {
+  transform: scale(0.6);
+  width: 100% !important;
+  height: 96px !important;
+  display: block;
+  margin: 0 auto;
+}
+.terms-yellow {
+  color: #bfa100 !important;
 }
