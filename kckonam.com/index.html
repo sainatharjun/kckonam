@@ -46,9 +46,6 @@
           width: 100% !important;
         }
 
-        .btns a {
-          margin: 0 !important;
-        }
 
         .orderNow {
           padding: 7px 20px;
@@ -382,8 +379,8 @@ Fixed Navigation
               <span style="display: block; color: #fff; font-weight: 400; margin-top: 2px;">(No Dine In)</span>
             </div>
             <div class="btns" style="margin: 24px 0;">
-              <a style="margin: 0 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/dine_in">Book Now - Bengaluru</a>
-              <a style="margin: 0 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/dine_in">Book Now - Chennai</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/dine_in">Book Now - Bengaluru</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/dine_in">Book Now - Chennai</a>
             </div>
             <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p>
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
@@ -471,12 +468,12 @@ Start Call To Action
             Sweeten the festivities with our classic Kerala Payasams this Onam. <br/> Available in 500ml bottles.
           </p>
           <div class="btns" style="margin: 24px 0;">
-            <a style="    margin: 0 8px;
+            <a style="    margin: 8px;
     border-radius: 20px;
     padding: 8px 20px;
     font-weight: 600;
     font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/delivery">Book Now - Bengaluru</a>
-            <a style="    margin: 0 8px;
+            <a style="    margin: 8px;
     border-radius: 20px;
     padding: 8px 20px;
     font-weight: 600;
@@ -561,8 +558,8 @@ Start Call To Action
               <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">Celebrate Onam with a premium gift box filled with<br/> Kerala’s authentic spices, sweets, and a gift voucher worth ₹1000/-.</span>
             </div>
             <div class="btns" style="margin: 24px 0;">
-              <a style="margin: 0 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/take_away">Book Now - Bengaluru</a>
-              <a style="margin: 0 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/take_away">Book Now - Chennai</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/take_away">Book Now - Bengaluru</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/take_away">Book Now - Chennai</a>
             </div>
             <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p>
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
@@ -596,7 +593,7 @@ Start Call To Action
     <style>
       /* Corporate Enquiry Form Modern Styles */
       .corporate-form-wrapper {
-        max-width: 360px !important;
+        max-width: 600px !important;
         margin: 0 auto;
         background: rgba(255,255,255,0.10);
         border-radius: 18px;
@@ -672,37 +669,61 @@ Start Call To Action
           max-width: 98vw;
         }
       }
+      @media (min-width: 769px) {
+    .corporate-form-fields-row {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      width: 100%;
+    }
+    .corporate-form-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .corporate-form-group.requirements-group {
+      width: 100%;
+      margin-top: 18px;
+    }
+  }
     </style>
     <section id="corporate-enquiry" class="call-to-action section" style="padding: 0; background-image: url('images/img3.jpg'); background-position: 50% 0; background-size: cover;">
       <div style="padding: 80px 0; background-color: rgba(0, 0, 0, 0.75); width: 100%; margin: 0 auto; border-radius: 0;">
         <div class="corporate-form-wrapper">
           <div class="corporate-form-title">Bulk Order Enquiry</div>
           <form id="corporateForm" autocomplete="off" method="POST" target="_self" action="https://docs.google.com/forms/d/e/1FAIpQLSeW1Mii2SF-sS5hlh4IAUjWGKsv9SxRnUvRAxBXWhI3M-SHQg/formResponse" onsubmit="return showAlert()">
-            <div class="corporate-form-group">
-              <label for="entry_2005620554">Name <span style="color:red">*</span></label>
-              <input type="text" id="entry_2005620554" name="entry.1228273850" required>
+            <div class="corporate-form-fields-row">
+              <div class="corporate-form-col">
+                <div class="corporate-form-group">
+                  <label for="entry_2005620554">Name <span style="color:red">*</span></label>
+                  <input type="text" id="entry_2005620554" name="entry.1228273850" required>
+                </div>
+                <div class="corporate-form-group">
+                  <label for="entry_1166974658">Mobile Number <span style="color:red">*</span></label>
+                  <input type="tel" id="entry_1166974658" name="entry.126397814" required pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit mobile number starting with 6-9">
+                </div>
+                <div class="corporate-form-group">
+                  <label for="entry_1065046570">Email <span style="color:red">*</span></label>
+                  <input type="email" id="entry_1065046570" name="entry.1532485352" required>
+                </div>
+              </div>
+              <div class="corporate-form-col">
+                <div class="corporate-form-group">
+                  <label for="entry_1045781291">Company Name</label>
+                  <input type="text" id="entry_1045781291" name="entry.1197793218">
+                </div>
+                <div class="corporate-form-group">
+                  <label for="entry_839337160">No. of Employees</label>
+                  <input type="number" id="entry_839337160" name="entry.283469898">
+                </div>
+                <div class="corporate-form-group">
+                  <label for="entry_1166974659">Order Requirement Date</label>
+                  <input type="date" id="entry_1166974659" name="entry.1053519972" required>
+                </div>
+              </div>
             </div>
-            <div class="corporate-form-group">
-              <label for="entry_1045781291">Company Name</label>
-              <input type="text" id="entry_1045781291" name="entry.1197793218">
-            </div>
-            <div class="corporate-form-group">
-              <label for="entry_1166974658">Mobile Number <span style="color:red">*</span></label>
-              <input type="tel" id="entry_1166974658" name="entry.126397814" required pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit mobile number starting with 6-9">
-            </div>
-            <div class="corporate-form-group">
-              <label for="entry_1065046570">Email <span style="color:red">*</span></label>
-              <input type="email" id="entry_1065046570" name="entry.1532485352" required>
-            </div>
-            <div class="corporate-form-group">
-              <label for="entry_839337160">No. of Employees</label>
-              <input type="number" id="entry_839337160" name="entry.283469898">
-            </div>
-            <div class="corporate-form-group">
-              <label for="entry_1166974659">Order Requirement Date</label>
-              <input type="date" id="entry_1166974659" name="entry.1053519972" required>
-            </div>
-            <div class="corporate-form-group">
+            <div class="corporate-form-group requirements-group">
               <label for="entry_839337161">Requirements</label>
               <textarea id="entry_839337161" name="entry.1092801025" rows="3"></textarea>
             </div>
@@ -757,37 +778,23 @@ Start Call To Action
           </div>
         </div>
         <!-- Mobile Carousel View -->
-        <div class="map-carousel">
-          <div style="text-align: center; margin-bottom: 18px;">
-            <h3 style="color: #fff; font-weight: 500;">Chennai - Pick-Up Points</h3>
+        <div class="map-list" style="display:none; width:100%;">
+          <div style="text-align:center; margin-bottom: 18px;">
+            <h3 style="color: #000; font-weight: 500;font-size: 22px;">Chennai - Pick-up Points</h3>
           </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">Marlen Mahal, Eco Park, Chetpet, Kilpauk, Chennai, Tamil Nadu 600010</p>
-            <iframe width="100%" height="192" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=720&amp;hl=en&amp;q=Marlen%20Mahal,Eco%20Park,%20Chetpet,%20Kilpauk,+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          <ul style="list-style-type: disc; padding-left: 22px;">
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=Marlen Mahal, Eco Park, Chetpet, Kilpauk, Chennai, Tamil Nadu 600010" target="_blank" style="color:#000; text-decoration:underline;">Marlen Mahal, Eco Park, Chetpet, Kilpauk, Chennai, Tamil Nadu 600010</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=KCK Restaurant, Anna Nagar, Chennai, Tamil Nadu 600040" target="_blank" style="color:#000; text-decoration:underline;">KCK Restaurant, Anna Nagar, Chennai, Tamil Nadu 600040</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=Phoenix Marketcity, Velachery, Chennai, Tamil Nadu 600042" target="_blank" style="color:#000; text-decoration:underline;">Phoenix Marketcity, Velachery, Chennai, Tamil Nadu 600042</a></li>
+          </ul>
+          <div style="text-align:center; margin: 32px 0 18px 0;">
+            <h3 style="color: #000; font-weight: 500;font-size: 22px;">Bengaluru - Pick-up Points</h3>
           </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">KCK Restaurant, Anna Nagar, Chennai, Tamil Nadu 600040</p>
-            <iframe width="100%" height="192" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=720&amp;hl=en&amp;q=KCK%20Restaurant,Anna%20Nagar,Chennai,600040&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-          </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">Phoenix Marketcity, Velachery, Chennai, Tamil Nadu 600042</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=720&amp;hl=en&amp;q=Phoenix%20Marketcity,Velachery,Chennai,600042&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-          </div>
-          <div style="text-align: center; margin: 32px 0 18px 0;">
-            <h3 style="color: #fff; font-weight: 500;">Bengaluru - Pick-Up Points</h3>
-          </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=St.%20John's%20Auditorium,%20koramangala+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-          </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">KCK Restaurant, Indiranagar, Bengaluru, Karnataka 560038</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=KCK%20Restaurant,Indiranagar,Bengaluru,560038&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-          </div>
-          <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">Orion Mall, Rajajinagar, Bengaluru, Karnataka 560055</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=Orion%20Mall,Rajajinagar,Bengaluru,560055&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-          </div>
+          <ul style="list-style-type: disc; padding-left: 22px;">
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034" target="_blank" style="color:#000; text-decoration:underline;">St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=KCK Restaurant, Indiranagar, Bengaluru, Karnataka 560038" target="_blank" style="color:#000; text-decoration:underline;">KCK Restaurant, Indiranagar, Bengaluru, Karnataka 560038</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=Orion Mall, Rajajinagar, Bengaluru, Karnataka 560055" target="_blank" style="color:#000; text-decoration:underline;">Orion Mall, Rajajinagar, Bengaluru, Karnataka 560055</a></li>
+          </ul>
         </div>
       </div>
     </div>

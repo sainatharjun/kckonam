@@ -53,7 +53,7 @@
   grid-template-rows: repeat(3, auto);
   gap: 8px;
 }
-.map-carousel {
+.map-list {
   display: none;
   position: relative;
 }
@@ -61,8 +61,8 @@
   .map-grid {
     display: none !important;
   }
-  .map-carousel {
-    display: block;
+  .map-list {
+    display: block!important;
   }
   .map-carousel .slick-slide {
     outline: none;
@@ -2343,8 +2343,11 @@ h4,h5,h6{
   }
 }
 @media screen and (max-width:768px) {
-    .orderNow{
+    a.orderNow.btns{
       margin-top:20px!important;
+    }
+    .top-footer p{
+      padding: 0;
     }
 }
 /*============================================================
