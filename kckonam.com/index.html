@@ -22,6 +22,16 @@
     />
 
     <style>
+      .navigation {
+        position: sticky;
+        top: 0;
+        z-index: 9998;
+        width: 100%;
+        background: #000;
+        left: 0;
+        transition: box-shadow 0.3s;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+      }
       .container{
         max-width: 100% !important;
       }
@@ -58,6 +68,10 @@
 
         .navigation {
           background-color: rgba(0, 0, 0, 1) !important;
+        }
+        #notificationBar {
+          padding-right: 48px !important;
+          padding-left: 48px !important;
         }
 
         #topimg {
@@ -229,6 +243,16 @@ section .container{
   </head>
 
   <body id="body">
+    <!-- Notification Bar -->
+    <div id="notificationBar" style="width:100%; background: #ffb300; color: #222; font-weight: 550; font-size: 1.08em; padding: 10px 0 18px 0; margin-bottom: 8px; text-align: center; position: relative; z-index: 9999;">
+      <span>Now, with the convenience of 3 pickup locations in Chennai and Bengaluru.</span>
+      <button id="closeNotification" aria-label="Close notification" style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5em; color: #fff; cursor: pointer; line-height: 1;">&times;</button>
+    </div>
+    <script>
+      document.getElementById('closeNotification').onclick = function() {
+        document.getElementById('notificationBar').style.display = 'none';
+      };
+    </script>
     <!--
   Start Preloader
   ==================================== -->
@@ -285,8 +309,7 @@ Fixed Navigation
     </div> -->
 
     <header
-      class="navigation fixed-top"
-      style="background-color: rgba(0, 0, 0, 0)"
+      class="navigation"
     >
       <div class="container">
         <!-- main nav -->
@@ -366,23 +389,17 @@ Fixed Navigation
         <div class="row">
           <div class="col-md-12 text-center">
             <h3 class="hlt" style="font-size:2.1rem; font-weight:600; margin-bottom: 10px;">Onasadhya
-            <span class="price-parenthesis" style="color:#ff9800; font-size:22px; font-weight:400;">(<span style="font-size: 16px;">₹7990/-</span>)</span>
+            <span class="price-parenthesis" style="color:#ff9800; font-size:22px; font-weight:400;">(<span style="font-size: 16px;">₹8000/-</span>)</span>
             </h3>
+            <p class="hlt" style="color:#ff9800;">Serves 5–6 packs. Available for take-away on September 4 & 5, 2025.</p>
             <p>
-              Some festivals are meant to be celebrated where they began — at home.
-              <br/>
-              Onasadhya with 26 vegetarian delicacies, prepared by authentic cooks from Kerala.
-              <br/>
-              Celebrate onam the Kappa Chakka Kandhari way.
+             Some festivals are meant to be celebrated where they began, at home. This Onam, unwrap 26 carefully curated vegetarian delicacies, prepared by seasoned Kerala cooks and packed with care. Every dish, a quiet reminder of how it’s meant to be. Celebrate Onam, the Kappa Chakka Kandhari way.
             </p>
-            <div style="margin-bottom: 10px;">
-              <span style="display: block; color: #fff; font-weight: 400; margin-top: 2px;">(No Dine In)</span>
-            </div>
             <div class="btns" style="margin: 24px 0;">
               <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/dine_in">Book Now - Bengaluru</a>
               <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/dine_in">Book Now - Chennai</a>
             </div>
-            <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p>
+            <!-- <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
             <p class="readmore">
 <!--             
@@ -465,7 +482,7 @@ Start Call To Action
           <h3 class="hlt" style="font-size:2.1rem; font-weight:600;">Onam Special Payasam</h3>
           <br>
           <p>
-            Sweeten the festivities with our classic Kerala Payasams this Onam. <br/> Available in 500ml bottles.
+            No Onam Sadhya is complete without Payasam and at KCK, it’s more than just dessert. Made with time-honoured recipes and fine ingredients, this is the grand finale.<br/> The one that lingers longest. Available in 500ml bottles.
           </p>
           <div class="btns" style="margin: 24px 0;">
             <a style="    margin: 8px;
@@ -479,15 +496,20 @@ Start Call To Action
     font-weight: 600;
     font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/delivery">Book Now - Chennai</a>
           </div>
-          <p style="margin-bottom: 24px;"><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p>
+          <!-- <p style="margin-bottom: 24px;"><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
           <div style="text-align: center; margin: 0 auto; max-width: 600px;">
+            <div style="margin-bottom: 24px;">
+              <span class="hlt" style="font-size: 16px;">Palada Pradhaman</span>
+              <span style="color: #ff9800; font-weight: 500; margin-left: 8px;">(<span style="font-size: 12px;">₹495/-</span>)</span><br>
+              <span style="font-size:16px; color: #fff;">Made with rice flakes or ada, simmered in milk and sugar, generously garnished with cashew</span>
+            </div>
             <div style="margin-bottom: 24px;">
               <span class="hlt" style="font-size: 16px;">Ada Pradhaman</span>
               <span style="color: #ff9800; font-weight: 500; margin-left: 8px;">(<span style="font-size: 12px;">₹495/-</span>)</span><br>
               <span style="font-size:16px; color: #fff;">A sweet treat of rice bits (ada) simmered with jaggery and coconut milk</span>
             </div>
             <div style="margin-bottom: 24px;">
-              <span class="hlt" style="font-size: 16px;">Chakka Payasam</span>
+              <span class="hlt" style="font-size: 16px;">Chakka Pradhaman</span>
               <span style="color: #ff9800; font-weight: 500; margin-left: 8px;">(<span style="font-size: 12px;">₹695/-</span>)</span><br>
               <span style="font-size:16px; color: #fff;">A traditional payasam of Chakka Varatti or jackfruit pulp, slow cooked in coconut milk and sweetened with jaggery</span>
             </div>
@@ -497,29 +519,24 @@ Start Call To Action
               <span style="font-size:16px; color: #fff;">A rich creamy dessert made with whole green moong and jaggery, cooked in coconut milk, flavoured with cardamom and topped with coconut bits</span>
             </div>
             <div style="margin-bottom: 24px;">
-              <span class="hlt" style="font-size: 16px;">Palada Payasam</span>
-              <span style="color: #ff9800; font-weight: 500; margin-left: 8px;">(<span style="font-size: 12px;">₹495/-</span>)</span><br>
-              <span style="font-size:16px; color: #fff;">Made with rice flakes or ada, simmered in milk and sugar, generously garnished with cashew</span>
-            </div>
-            <div style="margin-bottom: 24px;">
               <span class="hlt" style="font-size: 16px;">Combo Pack</span>
-<span style="color: #fff; font-size: 12px; margin-right: 4px; margin-left: 8px; position: relative; display: inline-block;">
-  ₹2,180/-
-  <svg viewBox="0 0 100 32" width="100%" height="100%" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none;">
-    <line x1="0" y1="32" x2="100" y2="0" stroke="#ff9800" stroke-width="1.2" stroke-linecap="round" />
-    <line x1="0" y1="0" x2="100" y2="32" stroke="#ff9800" stroke-width="1.2" stroke-linecap="round" />
-  </svg>
-</span>
+              <span style="color: #fff; font-size: 12px; margin-right: 4px; margin-left: 8px; position: relative; display: inline-block;">
+                ₹2,180/-
+                <svg viewBox="0 0 100 32" width="100%" height="100%" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none;">
+                  <line x1="0" y1="32" x2="100" y2="0" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                  <line x1="0" y1="0" x2="100" y2="32" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                </svg>
+              </span>
               <span style="color: #ff9800; font-weight: 500; font-size: 16px;">(<span style="font-size: 12px;">₹1,990/-</span>)</span><br>
               <div style="display: flex; justify-content: center;align-items: flex-start;flex-direction: row; gap: 36px;">
                 <div style="font-size:16px; color: #fff; display: flex; flex-direction: column; gap: 4px;">
-                <div>Palada Payasam</div>
-                <div>Ada Pradhaman</div>
+                  <div>Palada Pradhaman</div>
+                  <div>Ada Pradhaman</div>
                 </div>
                 <div>
-                <div>Chakka Pradhaman</div>
-                <div>Parippu Payasam</div>
-              </div>
+                  <div>Chakka Pradhaman</div>
+                  <div>Parippu Payasam</div>
+                </div>
               </div>
             </div>
           </div>
@@ -555,29 +572,27 @@ Start Call To Action
     font-size: 22px;
     font-weight: 400;">(<span style="font-size: 16px;">₹1890/-</span>)</span></h3>
             <div style="margin-bottom: 10px;">
-              <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">Celebrate Onam with a premium gift box filled with<br/> Kerala’s authentic spices, sweets, and a gift voucher worth ₹1000/-.</span>
+              <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">Celebrate with a box full of Kerala. From Marayur jaggery to jackfruit chips, <br/>this curated gift brings together the tastes and textures of Onam <br/>  and a ₹1000/- voucher for when they visit us.</span>
             </div>
             <div class="btns" style="margin: 24px 0;">
               <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-bengaluru/browse-menu/take_away">Book Now - Bengaluru</a>
               <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://thrivenow.in/kck-onam-chennai/browse-menu/take_away">Book Now - Chennai</a>
             </div>
-            <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p>
+            <!-- <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
             <div style="display: flex; justify-content: center; align-items: center; text-align: center; gap: 18px; width: 100%;margin-top: 18px;">
               <ol class="oll" style="flex: none; width: 180px; margin: 0 8px; text-align: left; list-style-type: disc; padding-left: 22px; font-size:16px;">
                 <li>Nutmeg Flower</li>
-                <li>Nutmeg Seed</li>
                 <li>Kodam Puli</li>
                 <li>Marayur Jaggery</li>
                 <li>Cloves</li>
                 <li>Pepper</li>
-                <li>Sharkara varatty</li>
               </ol>
               <ol class="oll" style="flex: none; width: 160px; margin: 0 8px; text-align: left; list-style-type: disc; padding-left: 22px; font-size:16px;">
+                <li>Sharkara varatty</li>
                 <li>Cinnamon</li>
                 <li>Cardamom</li>
                 <li>Inji Puli</li>
-                <li>Wooden Spoon (Coconut tavy)</li>
                 <li>Gift Voucher (Worth ₹1000)</li>
               </ol>
             </div>
@@ -604,10 +619,9 @@ Start Call To Action
       }
       .corporate-form-title {
         text-align: center;
-        margin-bottom: 28px;
         color: #ffb300;
         font-weight: 600;
-        font-size: 1.5rem !important;
+        font-size: 2.1rem !important;
         letter-spacing: 1px;
       }
       .corporate-form-group {
@@ -689,9 +703,13 @@ Start Call To Action
   }
     </style>
     <section id="corporate-enquiry" class="call-to-action section" style="padding: 0; background-image: url('images/img3.jpg'); background-position: 50% 0; background-size: cover;">
-      <div style="padding: 80px 0; background-color: rgba(0, 0, 0, 0.75); width: 100%; margin: 0 auto; border-radius: 0;">
+      <div style="padding: 80px 0; background-color: rgba(0, 0, 0, 0.8); width: 100%; margin: 0 auto; border-radius: 0;">
+        <div class="corporate-form-title">Bulk Order Enquiry</div>
+        <p style="max-width: 600px; margin: auto;padding: 16px 24px;">
+          <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">This Onam, bring your teams together over a traditional Sadhya- served with warmth, care, and 26+ dishes that bring you the true essence of Kerala. Bulk bookings open for the entire Onam season. Make it special, whenever you choose to celebrate.</span>
+        </p>
         <div class="corporate-form-wrapper">
-          <div class="corporate-form-title">Bulk Order Enquiry</div>
+
           <form id="corporateForm" autocomplete="off" method="POST" target="_self" action="https://docs.google.com/forms/d/e/1FAIpQLSeW1Mii2SF-sS5hlh4IAUjWGKsv9SxRnUvRAxBXWhI3M-SHQg/formResponse" onsubmit="return showAlert()">
             <div class="corporate-form-fields-row">
               <div class="corporate-form-col">
@@ -765,16 +783,22 @@ Start Call To Action
             <h3 style="color: #000; font-weight: 500;font-size: 24px;">Bengaluru - Pick-up Points</h3>
           </div>
           <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=St.%20John's%20Auditorium,%20koramangala+(Kappa%20Chakka%20Kandhari%20Restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <p style="text-align:center; color:#fff; font-size:16px;">WINGS ELIM Camping and Convention Centre, Collinwood Estate, ECC Rd, Prithvi Layout, Whitefield, Bengaluru, Karnataka 560066</p>
+            <a href="https://maps.app.goo.gl/FG8fommiKKT1ZV5u7?g_st=aw" target="_blank">
+              <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=WINGS%20ELIM%20Camping%20and%20Convention%20Centre,Whitefield,Bengaluru,560066&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </a>
           </div>
           <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">KCK Restaurant, Indiranagar, Bengaluru, Karnataka<br/> 560038</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=KCK%20Restaurant,Indiranagar,Bengaluru,560038&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <p style="text-align:center; color:#fff; font-size:16px;">St. John's Auditorium, 18th Main Rd, John Nagar, Koramangala, Bengaluru, Karnataka 560034<br/><br/></p>
+            <a href="https://maps.app.goo.gl/a59bQhaZ4bt21zQy5" target="_blank">
+              <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=St.%20John's%20Auditorium,18th%20Main%20Rd,John%20Nagar,Koramangala,Bengaluru,560034&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </a>
           </div>
           <div>
-            <p style="text-align:center; color:#fff; font-size:16px;">Orion Mall, Rajajinagar, Bengaluru, Karnataka<br/> 560055</p>
-            <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=Orion%20Mall,Rajajinagar,Bengaluru,560055&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <p style="text-align:center; color:#fff; font-size:16px;">Srikanteswara Bhavana, No.74, 5th cross, Malleshwaram, Bangalore - 560 003 (Near Malleshwaram Ground &amp; KCG Hospital) Phone: 23464400</p>
+            <a href="https://maps.app.goo.gl/UvLgibwfBWQTSrrv5" target="_blank">
+              <iframe width="100%" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=90%25&amp;height=720&amp;hl=en&amp;q=Srikanteswara%20Bhavana,No.74,5th%20cross,Malleshwaram,Bangalore,560003&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </a>
           </div>
         </div>
         <!-- Mobile Carousel View -->
@@ -791,9 +815,9 @@ Start Call To Action
             <h3 style="color: #000; font-weight: 500;font-size: 22px;">Bengaluru - Pick-up Points</h3>
           </div>
           <ul style="list-style-type: disc; padding-left: 22px;">
-            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034" target="_blank" style="color:#000; text-decoration:underline;">St. John's Auditorium, John Nagar, Koramangala, Bengaluru, Karnataka 560034</a></li>
-            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=KCK Restaurant, Indiranagar, Bengaluru, Karnataka 560038" target="_blank" style="color:#000; text-decoration:underline;">KCK Restaurant, Indiranagar, Bengaluru, Karnataka 560038</a></li>
-            <li style="margin-bottom:12px;"><a href="https://maps.google.com/?q=Orion Mall, Rajajinagar, Bengaluru, Karnataka 560055" target="_blank" style="color:#000; text-decoration:underline;">Orion Mall, Rajajinagar, Bengaluru, Karnataka 560055</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.app.goo.gl/FG8fommiKKT1ZV5u7?g_st=aw" target="_blank" style="color:#000; text-decoration:underline;">WINGS ELIM Camping and Convention Centre, Collinwood Estate, ECC Rd, Prithvi Layout, Whitefield, Bengaluru, Karnataka 560066</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.app.goo.gl/a59bQhaZ4bt21zQy5" target="_blank" style="color:#000; text-decoration:underline;">St. John's Auditorium, 18th Main Rd, John Nagar, Koramangala, Bengaluru, Karnataka 560034</a></li>
+            <li style="margin-bottom:12px;"><a href="https://maps.app.goo.gl/UvLgibwfBWQTSrrv5" target="_blank" style="color:#000; text-decoration:underline;">Srikanteswara Bhavana, No.74, 5th cross, Malleshwaram, Bangalore - 560 003 (Near Malleshwaram Ground &amp; KCG Hospital) Phone: 23464400</a></li>
           </ul>
         </div>
       </div>
@@ -855,20 +879,14 @@ Start Call To Action
             </div>
             <div class="footer-contact">
               <div style="text-align:center; margin-bottom: 4px;">
-        <span style="color: #fff; font-weight: 500; font-size: 1.18em; display: inline-block;">Contact us :</span>
+                <span style="color: #fff; font-weight: bold; font-size: 1.18em; display: inline-block;">Contact Us :</span>
               </div>
               <div class="footer-contact-info">
-                <p style="padding: 0; color: #fff;">
-                  <b style="font-weight: 600;">Chennai</b><br />
-                  10, Haddows Road,<br />
-                  Chennai-600006<br />
-                  <span style="color: #fff; font-size: 1.1em;"><span style="font-family: 'Segoe UI Symbol', 'Arial'; color: #ff9800;">📱</span> 98585 91010</span><br />
+                <p style="padding: 0; color: #fff; font-size: 1.18em; font-weight: 600;">
+                  <span style="font-family: 'Segoe UI Symbol', 'Arial'; color: #ff9800;">📱</span> Chennai: 98585 91010
                 </p>
-                <p style="color: #fff;">
-                  <b style="font-weight: 600;">Bengaluru</b><br />
-                  6th Block, Koramangala,<br />
-                  Bengaluru-560095<br />
-                  <span style="color: #fff; font-size: 1.1em;"><span style="font-family: 'Segoe UI Symbol', 'Arial'; color: #ff9800;">📱</span> 636467 1010</span><br />
+                <p style="color: #fff; font-size: 1.18em; font-weight: 600;">
+                  <span style="font-family: 'Segoe UI Symbol', 'Arial'; color: #ff9800;">📱</span> Bengaluru: 636467 1010
                 </p>
               </div>
             </div>
@@ -1059,6 +1077,8 @@ Start Call To Action
         document.getElementById(id).style.display="flex";
         document.getElementById(cta).style.display="none"
       }
+
+      // ...existing code...
     </script>
   </body>
 
