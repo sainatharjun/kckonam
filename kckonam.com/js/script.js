@@ -511,3 +511,162 @@ $(".scrollToMap").on("click", () => {
     block: "start", // or "end"
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("corporateForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const submitText = document.getElementById("submitText");
+  const loadingSpinner = document.getElementById("loadingSpinner");
+
+  // Form validation functions
+  function validateMobile(mobile) {
+    const mobilePattern = /^[6-9][0-9]{9}$/;
+    return mobilePattern.test(mobile);
+  }
+
+  function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+  function showError(fieldId, message) {
+    const errorElement = document.getElementById(fieldId + "-error");
+    if (errorElement) {
+      errorElement.textContent = message;
+    }
+  }
+
+  function clearErrors() {
+    const errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach((element) => {
+      element.textContent = "";
+    });
+  }
+
+  function validateForm() {
+    clearErrors();
+    let isValid = true;
+
+    // Validate name
+    const name = document.getElementById("entry_2005620554").value.trim();
+    if (!name) {
+      showError("name", "Name is required");
+      isValid = false;
+    }
+
+    // Validate mobile
+    const mobile = document.getElementById("entry_1166974658").value.trim();
+    if (!mobile) {
+      showError("mobile", "Mobile number is required");
+      isValid = false;
+    } else if (!validateMobile(mobile)) {
+      showError(
+        "mobile",
+        "Enter a valid 10-digit mobile number starting with 6-9"
+      );
+      isValid = false;
+    }
+
+    // Validate email
+    const email = document.getElementById("entry_1065046570").value.trim();
+    if (!email) {
+      showError("email", "Email is required");
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      showError("email", "Enter a valid email address");
+      isValid = false;
+    }
+
+    // Validate date
+    const date = document.getElementById("entry_1166974659").value;
+    if (!date) {
+      showError("date", "Order requirement date is required");
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  function setLoadingState(isLoading) {
+    submitBtn.disabled = isLoading;
+    if (isLoading) {
+      submitText.textContent = "Submitting...";
+      loadingSpinner.style.display = "block";
+    } else {
+      submitText.textContent = "Submit";
+      loadingSpinner.style.display = "none";
+    }
+  }
+
+  function showSuccessMessage() {
+    alert(
+      "Thank you! Your form has been submitted successfully. We will get back to you soon."
+    );
+  }
+
+  function showErrorMessage() {
+    // Show alert as well
+    alert("There was an error submitting your form. Please try again.");
+  }
+
+  // Handle form submission
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoadingState(true);
+
+    const formData = new FormData(form);
+
+    try {
+      // Submit to Google Forms
+      const response = await fetch(
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLScWjILBPW_HtVouV8ZHb_kW_yoUYo0zvKYz75jST9g5ak3reg/formResponse",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        }
+      );
+
+      // Since we're using no-cors, we can't check the actual response
+      // But if we reach here without error, the form was likely submitted successfully
+      showSuccessMessage();
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      showErrorMessage();
+    } finally {
+      setLoadingState(false);
+    }
+  });
+
+  // Real-time validation
+  document
+    .getElementById("entry_1166974658")
+    .addEventListener("input", function (e) {
+      const mobile = e.target.value.trim();
+      if (mobile && !validateMobile(mobile)) {
+        showError(
+          "mobile",
+          "Enter a valid 10-digit mobile number starting with 6-9"
+        );
+      } else {
+        showError("mobile", "");
+      }
+    });
+
+  document
+    .getElementById("entry_1065046570")
+    .addEventListener("input", function (e) {
+      const email = e.target.value.trim();
+      if (email && !validateEmail(email)) {
+        showError("email", "Enter a valid email address");
+      } else {
+        showError("email", "");
+      }
+    });
+});
