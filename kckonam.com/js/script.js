@@ -578,11 +578,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Validate date
-    const date = document.getElementById("entry_1166974659").value;
-    if (!date) {
-      showError("date", "Order requirement date is required");
-      isValid = false;
-    }
 
     return isValid;
   }
@@ -600,7 +595,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showSuccessMessage() {
     alert(
-      "Thank you! Your form has been submitted successfully. We will get back to you soon."
+      "Thank you! Your enquiry has been submitted successfully. We will get back to you."
     );
   }
 

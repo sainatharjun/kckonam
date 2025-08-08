@@ -160,7 +160,7 @@ html{
   overflow-x: hidden!important;
 }
 .btns{
-  margin-top: 40px!important;
+  margin-top: 24px!important;
 }
 .btns a{
   background-color: rgb(255, 102, 0);
@@ -573,7 +573,7 @@ a:focus, a:hover {
 }
 
 .logo {
-  margin-top: 10px;
+  margin: 10px 0;
   display: inline-block;
 }
 
@@ -728,7 +728,6 @@ a:focus, a:hover {
 
 .navbar-brand {
   height: auto;
-  padding: 8px 0;
 }
 
 .navbar-brand h1 {
@@ -2661,6 +2660,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 150px !important;
   display: block;
   margin: 0 auto;
+  position: relative;
+  top: -30px;
 }
 .terms-yellow {
   color: #bfa100 !important;
