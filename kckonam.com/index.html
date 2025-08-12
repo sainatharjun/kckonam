@@ -245,7 +245,7 @@ section .container{
   <body id="body">
     <!-- Notification Bar -->
     <div id="notificationBar" style="width:100%; background: #ffb300; color: #222; font-weight: 550; font-size: 1.08em; padding: 10px 0 18px 0; text-align: center; position: relative; z-index: 9999;">
-      <span>Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru.</span>
+      <span>Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru. Pickups available on Sept 4 & 5, 2025.</span>
       <button id="closeNotification" aria-label="Close notification" style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5em; color: #000; cursor: pointer; line-height: 1;">&times;</button>
     </div>
     <script>
@@ -360,7 +360,7 @@ Fixed Navigation
       <img
         class="mobileImage"
         id="topimg"
-        src="images/onasadhya.png"
+        src="images/leafimg.jpg"
         style="width: 100%; height: 20%"
         alt=""
       />
@@ -370,8 +370,8 @@ Fixed Navigation
       style="
 margin-top: 0px;
     padding: 0px 0px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%), url('images/onasadhya.png');
-    background-position: -40% 0%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%), url('images/leafimg.jpg');
+    background-position: -135% 0%;
     background-size: 90%;
     background-repeat: no-repeat;
       "
@@ -758,9 +758,10 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
         }
       }
     </style>
-    <section id="corporate-enquiry" class="call-to-action section" style="padding: 0; background-image: url('images/img3.jpg'); background-position: 50% 0; background-size: cover;">
+    <section id="corporate-enquiry" class="call-to-action section" style="padding: 0; background-image: url('images/onasadhya.png'); background-position: 50% 0; background-size: cover;">
       <div style="padding: 120px 0 50px 0; background-color: rgba(0, 0, 0, 0.8); width: 100%; margin: 0 auto; border-radius: 0;">
         <div class="corporate-form-title">Bulk Order Enquiry</div>
+        <p class="hlt" style="color:#ff9800;margin: auto;max-width: 950px; padding: 0 16px;">Minimum order quantities: Payasam – 20 units, Onasadhya – 50 units, Combo – 10 units, and Gift Box – 20 units.</p>
         <p style="max-width: 600px; margin: auto;padding: 16px 24px;">
           <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">This Onam, bring your teams together over a traditional Sadhya served with warmth, care and 26+ dishes that bring you the true essence of Kerala. Bulk bookings open for the entire Onam season. Make it special, whenever you choose to celebrate.</span>
         </p>
@@ -816,6 +817,13 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
     </section>
     <!-- End Corporate Enquiry Form Section -->
     <div class="row" id="mapDiv" style="width: 100%; padding: 40px 10px 40px 10px; margin: 0; background-color: #ffe6a0c5;">
+       <center style="width: 100%;">
+          <h2 style="font-size: 16px; max-width: 600px;">Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru. Pickups available on Sept 4 & 5, 2025.</h2>
+         </center>
+         <hr style="display: block;
+    width: 100%;
+    border: 1px solid rgba(41, 40, 40, 0.566);
+    margin: 16px 0;" />
       <div class="col-lg-10" style="margin-right: auto; margin-left: auto; display: flex;justify-content: center; align-items: center;">
         <!-- Desktop/Tablet Grid View -->
         <div class="map-grid">
@@ -920,7 +928,10 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
       <center>
         <h2 class="hlt" style="color: #f28209; font-weight:500; padding: 20px 0; font-size: 1.02rem;">
           Orders once booked are non-refundable.<br />
-          <span style="color: #f28209;">*Terms &amp; Conditions apply.</span>
+          <span style="color: #f28209;">*Terms &amp; Conditions -
+            <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#giftVouchersModal">Gift Vouchers</button>
+            <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#onamContestModal">Onam Contest</button>
+          </span>
         </h2>
       </center>
     </section>
@@ -956,6 +967,45 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
     </footer>
     <!-- end footer -->
 
+    <!-- Gift Vouchers Modal -->
+    <div class="modal fade" id="giftVouchersModal" tabindex="-1" role="dialog" aria-labelledby="giftVouchersModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="giftVouchersModalLabel">Gift Vouchers</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gift voucher details will be shown here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onam Contest Modal -->
+    <div class="modal fade" id="onamContestModal" tabindex="-1" role="dialog" aria-labelledby="onamContestModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="onamContestModalLabel">Onam Contest</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Onam contest details will be shown here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- end Footer Area
     ========================================== -->
 
