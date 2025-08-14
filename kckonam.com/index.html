@@ -71,6 +71,7 @@
         }
         #notificationBar {
           padding-right: 48px !important;
+          font-weight: 400!important;
           padding-left: 48px !important;
         }
 
@@ -245,7 +246,7 @@ section .container{
   <body id="body">
     <!-- Notification Bar -->
     <div id="notificationBar" style="width:100%; background: #ffb300; color: #222; font-weight: 550; font-size: 1.08em; padding: 10px 0 18px 0; text-align: center; position: relative; z-index: 9999;">
-      <span>Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru. Pickups available on Sept 4 & 5, 2025.</span>
+      <span>Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru on Sept 4 & 5, 2025.</span>
       <button id="closeNotification" aria-label="Close notification" style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.5em; color: #000; cursor: pointer; line-height: 1;">&times;</button>
     </div>
     <script>
@@ -367,16 +368,37 @@ Fixed Navigation
     </center>
     <section
       id="take_away"
-      style="
-margin-top: 0px;
-    padding: 0px 0px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%), url('images/leafimg.jpg');
-    background-position: -135% 0%;
-    background-size: 90%;
-    background-repeat: no-repeat;
-      "
-      class="call-to-action section"
+      class="call-to-action section take-away-bg"
     >
+    <style>
+      .take-away-bg {
+        margin-top: 0px;
+        padding: 0px 0px;
+        position: relative;
+        min-height: 0;
+        background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 100%),
+          url(images/leafimg.jpg);
+        background-position: center;
+        background-size: 140%;
+        background-repeat: no-repeat;
+      }
+      .take-away-bg::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        pointer-events: none;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        z-index: 1;
+      }
+      .take-away-bg > .container, .take-away-bg > .row, .take-away-bg > div {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
       <div
         style="
           padding: 160px 13px 60px 13px;
@@ -397,8 +419,8 @@ margin-top: 0px;
              Some festivals are meant to be celebrated where they began, at home. This Onam, unwrap 26 carefully curated vegetarian delicacies, prepared by seasoned Kerala cooks and packed with care. Every dish, a quiet reminder of how it’s meant to be. Celebrate Onam, the Kappa Chakka Kandhari way.
             </p>
             <div class="btns" style="margin: 24px 0;">
-              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Bengaluru</a>
-              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Chennai</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Bengaluru</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Chennai</a>
             </div>
             <!-- <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
@@ -490,12 +512,12 @@ Start Call To Action
     border-radius: 20px;
     padding: 8px 20px;
     font-weight: 600;
-    font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Bengaluru</a>
+    font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Bengaluru</a>
             <a style="    margin: 8px;
     border-radius: 20px;
     padding: 8px 20px;
     font-weight: 600;
-    font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Chennai</a>
+    font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Chennai</a>
           </div>
           <!-- <p style="margin-bottom: 24px;"><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
           <div style="text-align: center; margin: 0 auto; max-width: 600px;">
@@ -582,8 +604,8 @@ this curated gift brings together the tastes and textures of Onam<br/>
 and gift vouchers worth ₹1500/-  for when they visit us.</span>
             </div>
             <div class="btns" style="margin: 24px 0;">
-              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Bengaluru</a>
-              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="#">Book Now - Chennai</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Bengaluru</a>
+              <a style="margin: 8px; border-radius: 20px; padding: 8px 20px; font-weight: 600; font-size: 0.9em;" class="btn orderNow" target="_blank" href="https://kappachakkakandhari.uengage.in/">Book Now - Chennai</a>
             </div>
             <!-- <p><span style="font-size:16px;">Take-away Dates: September 4 & 5, 2025</span></p> -->
             <h6 style="text-decoration: underline; margin-top:16px; font-size:16px;">Box Content</h6>
@@ -761,7 +783,7 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
     <section id="corporate-enquiry" class="call-to-action section" style="padding: 0; background-image: url('images/onasadhya.png'); background-position: 50% 0; background-size: cover;">
       <div style="padding: 120px 0 50px 0; background-color: rgba(0, 0, 0, 0.8); width: 100%; margin: 0 auto; border-radius: 0;">
         <div class="corporate-form-title">Bulk Order Enquiry</div>
-        <p class="hlt" style="color:#ff9800;margin: auto;max-width: 950px; padding: 0 16px;">Minimum order quantities: Payasam – 20 units, Onasadhya – 50 units, Combo – 10 units, and Gift Box – 20 units.</p>
+        <p class="hlt" style="color:#ff9800;margin: auto;max-width: 950px; padding: 0 16px;text-align: center;">(Min. order : Onasadhya – 50 nos., Payasam – 20 nos.,  Combo Pack – 10 nos., and Gift Box – 20 nos.)</p>
         <p style="max-width: 600px; margin: auto;padding: 16px 24px;">
           <span style="display: block; font-size:16px; color: #fff; font-weight: 500; margin-bottom: 10px;">This Onam, bring your teams together over a traditional Sadhya served with warmth, care and 26+ dishes that bring you the true essence of Kerala. Bulk bookings open for the entire Onam season. Make it special, whenever you choose to celebrate.</span>
         </p>
@@ -816,9 +838,9 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
       </div>
     </section>
     <!-- End Corporate Enquiry Form Section -->
-    <div class="row" id="mapDiv" style="width: 100%; padding: 40px 10px 40px 10px; margin: 0; background-color: #ffe6a0c5;">
+    <div class="row" id="mapDiv" style="width: 100%; padding: 24px 10px 40px 10px; margin: 0; background-color: #ffe6a0c5;">
        <center style="width: 100%;">
-          <h2 style="font-size: 16px; max-width: 600px;">Now, with the convenience of 3 pick-up locations in Chennai & Bengaluru. Pickups available on Sept 4 & 5, 2025.</h2>
+          <h2 style="font-size: 24px; max-width: 750px; margin-bottom: 8px;">Pick-ups available on September 4 & 5, 2025</h2>
          </center>
          <hr style="display: block;
     width: 100%;
@@ -929,8 +951,9 @@ and gift vouchers worth ₹1500/-  for when they visit us.</span>
         <h2 class="hlt" style="color: #f28209; font-weight:500; padding: 20px 0; font-size: 1.02rem;">
           Orders once booked are non-refundable.<br />
           <span style="color: #f28209;">*Terms &amp; Conditions -
-            <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#giftVouchersModal">Gift Vouchers</button>
-            <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#onamContestModal">Onam Contest</button>
+            <!-- <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#giftVouchersModal">Gift Vouchers</button>
+            <button type="button" style="margin: 0; border-radius: 18px; text-decoration: underline; font-weight: 500; background: none; background-color: none; color: #f28209; font-size: 1em; border: none; cursor: pointer;" data-toggle="modal" data-target="#onamContestModal">Onam Contest</button> -->
+          Gift Vouchers &nbsp; / &nbsp; Onam Contest
           </span>
         </h2>
       </center>
